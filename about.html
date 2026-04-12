@@ -3,58 +3,338 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Jordan Mazer</title>
-<meta name="description" content="I connect people to opportunities at early-stage, a16z-backed startups. 14+ years in talent, from agency recruiting to running 1,000+ hire/year operations at Riot Games to building the talent engine at a16z.">
-<meta property="og:title" content="About -- Jordan Mazer">
-<meta property="og:description" content="I connect people to opportunities at early-stage, a16z-backed startups. 14+ years in talent, from agency recruiting to running 1,000+ hire/year operations at Riot Games to building the talent engine at a16z.">
+<title>About — Jordan Mazer</title>
+<meta name="description" content="Bridge to capital and opportunities at early, a16z-backed startups. Helping speedrun + game fund founders build their">
+<meta property="og:title" content="About — Jordan Mazer">
+<meta property="og:description" content="Bridge to capital and opportunities at early, a16z-backed startups. Helping speedrun + game fund founders build their">
 <meta property="og:type" content="website">
-<style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 17px; -webkit-font-smoothing: antialiased; }
-body { font-family: Georgia, 'Times New Roman', serif; color: #222; background: #fdfdfd; line-height: 1.7; max-width: 36rem; margin: 0 auto; padding: 3rem 1.5rem 2.5rem; }
-h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.35rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 0.3rem; }
-h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1rem; font-weight: 600; margin: 2rem 0 0.5rem; }
-h2:first-child { margin-top: 0; }
-h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.95rem; font-weight: 600; margin: 1.5rem 0 0.2rem; }
-h3:first-child { margin-top: 0; }
-h3 a { color: #222; text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: 2px; }
-h3 a:hover { text-decoration-color: #222; }
-a { color: #222; } a:hover { color: #555; }
-p { margin-bottom: 0.6rem; } p:last-child { margin-bottom: 0; }
-nav { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.85rem; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; display: flex; gap: 1.25rem; align-items: baseline; flex-wrap: wrap; }
-nav .site-name { font-weight: 600; font-size: 0.9rem; color: #222; text-decoration: none; margin-right: auto; }
-nav a { color: #888; text-decoration: none; } nav a:hover { color: #222; }
-.nav-active { color: #222; font-weight: 500; }
-.subtitle { font-style: italic; color: #555; font-size: 1rem; margin-bottom: 0.5rem; }
-.meta { color: #999; font-size: 0.85rem; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
-.page-links { font-size: 0.85rem; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin-top: 0.3rem; }
-.page-links a { margin-right: 1rem; color: #555; text-decoration: underline; text-decoration-color: #ddd; text-underline-offset: 2px; }
-.page-links a:hover { color: #222; text-decoration-color: #222; }
-.project { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid #f0f0f0; }
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>:root {
+  /* Backgrounds */
+  --bg: #050505;
+  --bg-alt: #0a0a0a;
+  --bg-card: #0f0f0f;
+  --bg-nav: rgba(5,5,5,0.92);
+  --bg-sidebar: transparent;
+
+  /* Text */
+  --text: #aaa;
+  --text-muted: #666;
+  --text-faint: #444;
+
+  /* Accent */
+  --accent: #999;
+  --accent-hover: #ccc;
+
+  /* Borders */
+  --border: #1a1a1a;
+  --border-light: #111;
+
+  /* Typography */
+  --font-display: 'JetBrains Mono', ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+  --font-body: 'JetBrains Mono', ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Spacing */
+  --wrap-width: 620px;
+  --nav-height: 48px;
+
+  /* Footer — dark bg: use readable light color for link */
+  --footer-text: #aaa;
+  --footer-link: #bbb;
+  --footer-link-hover: #ccc;
+  --footer-border: var(--border);
+}
+
+/* ---- BASE ---- */
+body { font-family: var(--font-body); color: #888; background: var(--bg); line-height: 1.6; font-size: 14px; }
+a { color: var(--accent); text-decoration: none; transition: color 0.15s ease; }
+a:hover { color: var(--accent-hover); }
+h1 { font-family: var(--font-display); font-weight: 500; color: #ccc; letter-spacing: -0.02em; }
+h2 { font-family: var(--font-display); font-size: 13px; font-weight: 500; color: #555; margin: 40px 0 16px; text-transform: lowercase; letter-spacing: 0.05em; }
+.site-name { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: #ccc; text-decoration: none; letter-spacing: -0.02em; }
+
+/* ---- RADIAL GLOW ---- */
+body::before { content: ''; position: fixed; top: 35%; left: 50%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(0,210,180,0.045) 0%, rgba(0,180,160,0.015) 40%, rgba(0,210,180,0) 70%); transform: translate(-50%, -50%); pointer-events: none; z-index: 0; }
+.wrap { position: relative; z-index: 1; }
+
+/* ---- NAV ---- */
+nav { display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; margin-bottom: 48px; font-size: 13px; }
+nav .site-name { margin-right: auto; }
+nav a { color: #555; text-decoration: none; }
+nav a:hover { color: #999; }
+nav .active { color: #888; }
+
+/* ---- INTRO/BIO ---- */
+.intro { font-size: 14px; color: #888; line-height: 1.75; margin-bottom: 32px; }
+.intro p { margin-bottom: 12px; }
+.intro a { color: #999; text-decoration: underline; text-decoration-color: #333; text-underline-offset: 4px; }
+.intro a:hover { color: #ccc; text-decoration-color: #666; }
+.home-bio { font-size: 14px; color: #888; line-height: 1.75; margin-bottom: 32px; }
+.home-bio p { margin-bottom: 16px; }
+.home-bio a { color: #999; text-decoration: underline; text-decoration-color: #333; text-underline-offset: 4px; }
+.home-bio a:hover { color: #ccc; text-decoration-color: #666; }
+
+/* ---- LINK LIST ---- */
+.link-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.link-list li { padding: 8px 0; }
+.link-list li a { color: #888; font-size: 14px; }
+.link-list li a:hover { color: #ccc; }
+
+/* ---- ENTRIES ---- */
+.entry { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.entry:last-child { border-bottom: none; }
+.entry-header { margin-bottom: 4px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.entry-title { font-weight: 500; font-size: 14px; color: var(--text); }
+.entry-title a { color: var(--text); text-decoration: underline; text-decoration-color: #333; text-underline-offset: 3px; }
+.entry-title a:hover { color: #ccc; text-decoration-color: #666; }
+.entry-date { font-size: 12px; color: var(--text-faint); white-space: nowrap; font-family: var(--font-mono); }
+.entry-role { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+.entry-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.entry-desc a { color: #888; text-decoration: underline; text-decoration-color: #333; text-underline-offset: 3px; }
+.entry-desc a:hover { color: #ccc; }
+.entry ul { margin: 6px 0 0 0; padding-left: 0 !important; font-size: 13px; color: var(--text-muted); list-style: none !important; }
+.entry li { margin-bottom: 3px; line-height: 1.5; padding-left: 16px; text-indent: -16px; }
+.entry li::before { content: '-'; margin-right: 8px; color: #333; display: inline; }
+
+/* ---- SUB-ENTRIES ---- */
+.sub-entry { padding: 10px 0 0; margin-top: 10px; border-top: 1px solid var(--border-light); }
+.sub-entry:first-child { padding-top: 4px; margin-top: 4px; border-top: none; }
+.sub-entry .entry-role { font-weight: 500; font-style: normal; font-size: 13px; color: #888; }
+.sub-entry .entry-date { font-size: 11px; }
+
+/* ---- DETAILS ---- */
+details { margin-top: 6px; }
+details summary { cursor: pointer; font-size: 12px; color: var(--text-faint); list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: '+ more'; }
+details[open] summary::before { content: '- less'; }
+details .detail-content { padding-top: 8px; }
+
+/* ---- ABOUT ---- */
+.strengths-list { list-style: none; padding: 0; margin: 0; }
+.strengths-list li { font-size: 13px; color: #777; padding: 4px 0 4px 20px; position: relative; }
+.strengths-list li::before { content: '-'; color: #333; position: absolute; left: 0; }
+.skills-list { font-size: 13px; color: #555; line-height: 1.4; }
+.skills-grid { font-size: 13px; color: #555; line-height: 1.4; column-count: 2; column-gap: 32px; }
+.skills-grid span { display: block; padding: 2px 0; }
+
+/* ---- CONTACT ---- */
+.contact-line { font-size: 14px; }
+.contact-line a { margin-right: 20px; color: #888; text-decoration: underline; text-decoration-color: #333; text-underline-offset: 4px; }
+.contact-line a:hover { color: #ccc; text-decoration-color: #666; }
+
+/* ---- CARDS PILL OVERRIDE ---- */
+.skills-list span { border-color: #333 !important; }
+
+/* ---- CARD BORDER OVERRIDE ---- */
+.card, .hero { border-color: #222 !important; }
+
+/* ---- FOOTER ---- */
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--footer-border); font-size: 12px; color: var(--footer-text); }
+footer a { color: var(--footer-link); font-weight: 700; text-decoration: underline; text-decoration-color: #444; text-underline-offset: 3px; }
+footer a:hover { color: var(--footer-link-hover); }
+
+/* ---- PRINT ---- */
+@media print { nav, footer { display: none; } body { background: #fff; color: #1a1a1a; } body::before { display: none; } .wrap { padding: 1rem; max-width: none; } .entry-title { color: #1a1a1a; } .entry-date { color: #666; } .entry-role { color: #444; } .entry-desc { color: #333; } .entry ul { color: #333; } .entry li::before { color: #999; } h2 { color: #444; } .home-bio { color: #333; } .home-bio a { color: #1a1a1a; } .strengths-list li { color: #333; } .skills-grid { color: #333; } .contact-line a { color: #1a1a1a; } }
+
+/* ---- RESPONSIVE 660px ---- */
+@media (max-width: 660px) {
+  nav { font-size: 12px; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+  .entry { padding: 12px 0; }
+  .entry-header { flex-direction: column; }
+  .entry-date { float: none; margin-bottom: 2px; }
+  .sub-entry .entry-header { flex-direction: column; }
+  .sub-entry .entry-date { float: none; }
+  .skills-grid { column-count: 1; }
+  .home-bio { font-size: 13px; }
+  p { word-wrap: break-word; overflow-wrap: break-word; }
+}
+
+/* ---- RESPONSIVE 480px ---- */
+@media (max-width: 480px) {
+  nav .site-name { font-size: 14px; }
+  h2 { font-size: 12px; }
+  nav { font-size: 11px; gap: 8px; }
+  .entry-title { font-size: 13px; }
+  .entry-desc { font-size: 12px; }
+  .entry ul { font-size: 12px; }
+  .home-bio { font-size: 12px; }
+  .strengths-list li { font-size: 12px; }
+}
+/* === sidebar-right layout: structural only === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; overflow-y: scroll; }
+body { font-family: var(--font-body); color: var(--text); background: var(--bg); line-height: 1.65; margin: 0; padding: 0; font-size: 15px; }
+
+/* --- Outer wrap --- */
+.wrap { width: 100% !important; max-width: 960px; margin: 0 auto; padding: 32px 40px 48px; }
+
+/* --- Nav --- */
+nav { display: flex; gap: 18px; align-items: baseline; flex-wrap: wrap; margin-bottom: 28px; font-size: 14px; border-bottom: 1px solid var(--border); padding-bottom: 14px; background: var(--bg-nav, transparent); border-top: none; border-left: none; border-right: none; box-shadow: none; }
+nav .site-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); text-decoration: none; margin-right: auto; letter-spacing: -0.02em; }
+nav .site-name-hidden { visibility: hidden; }
+nav .nav-links { display: contents; }
+nav a { color: var(--text); text-decoration: none; font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
+nav a:hover { color: var(--accent); }
+nav .active { color: var(--accent); font-weight: 600; }
+nav span { font-size: 13px; letter-spacing: 0.02em; text-transform: uppercase; }
+
+/* --- Two-column layout --- */
+.layout { display: flex; gap: 28px; align-items: flex-start; }
+.main-col { flex: 1; min-width: 0; }
+.sidebar { width: 260px; flex-shrink: 0; position: sticky; top: 32px; align-self: flex-start; padding-left: 24px; border-left: 1px solid var(--border); min-width: 0; overflow-wrap: break-word; word-break: break-word; }
+
+/* --- Sidebar sections --- */
+.sidebar-section { margin-bottom: 24px; }
+.sidebar-label { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 2px solid var(--accent); display: inline-block; }
+.sidebar-content { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.sidebar-content a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-size: 13px; }
+.sidebar-item { display: block; margin-bottom: 4px; }
+.sidebar-role { font-size: 13px; color: var(--text); font-weight: 600; display: block; margin-bottom: 3px; overflow-wrap: break-word; word-break: break-word; }
+.sidebar-location { font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); }
+.sidebar-skills-list { list-style: none; padding: 0; margin: 0; }
+.sidebar-skills-list li { font-size: 13px; color: var(--text-muted); padding: 2px 0; line-height: 1.5; overflow-wrap: break-word; word-break: break-word; }
+
+/* --- Links --- */
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+
+/* --- Headings --- */
+h1 { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--text); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 8px; }
+h2 { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; margin: 32px 0 14px; border-top: 1px solid var(--border); padding-top: 14px; }
+h2:first-child, .main-col > h2:first-child { margin-top: 0; border-top: none; padding-top: 0; }
+
+/* --- Hero (home page) --- */
+.hero { margin-bottom: 24px; }
+.hero-headline { font-size: 16px; color: var(--text-muted); line-height: 1.6; margin-bottom: 4px; }
+.hero-contact { font-size: 14px; margin-top: 6px; }
+.hero-contact a { color: var(--accent); }
+
+/* --- Home Bio --- */
+.home-bio { font-size: 15px; color: var(--text); line-height: 1.75; }
+.home-bio p { margin-bottom: 14px; }
+.home-bio a { color: var(--accent); }
+
+/* --- Experience entries --- */
+.entry { margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid var(--border-light); }
+.entry:last-child { border-bottom: none; padding-bottom: 0; }
+.entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.entry-title { font-weight: 700; font-size: 15px; color: var(--text); }
+.entry-date { font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); white-space: nowrap; }
+.entry-role { font-size: 14px; color: var(--text-muted); font-style: italic; margin-bottom: 4px; }
+.entry ul { margin: 6px 0 0 0; padding-left: 18px; font-size: 14px; color: var(--text-muted); list-style: disc; }
+.entry li { margin-bottom: 4px; line-height: 1.55; }
+.entry-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* --- Sub-entry (multi-role companies) --- */
+.sub-entry { padding: 10px 0 0; margin-top: 10px; border-top: 1px solid var(--border-light); }
+.sub-entry:first-child { padding-top: 4px; margin-top: 4px; border-top: none; }
+.sub-entry .entry-role { font-weight: 600; font-style: normal; color: var(--text); }
+.sub-entry .entry-date { font-size: 11px; }
+.sub-entry .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+
+/* --- Details toggle --- */
+details { margin-top: 6px; }
+details summary { cursor: pointer; font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: '+ more'; }
+details[open] summary::before { content: '- less'; }
+details .detail-content { padding-top: 8px; }
+
+/* --- Projects --- */
+.project { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light); }
 .project:last-child { border-bottom: none; padding-bottom: 0; }
-.metric { font-size: 0.85rem; color: #888; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin-bottom: 0.3rem; }
-.job { margin-bottom: 2rem; } .job:last-child { margin-bottom: 0; }
-.sub-role { margin-top: 0.75rem; padding-top: 0.6rem; border-top: 1px solid #f5f5f5; }
-.sub-role:first-child { margin-top: 0.25rem; padding-top: 0; border-top: none; }
-.sub-role-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.25rem; }
-.job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.25rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-.job-header strong { font-size: 0.9rem; }
-.date { color: #999; font-size: 0.8rem; font-family: -apple-system, BlinkMacSystemFont, sans-serif; white-space: nowrap; }
-.role { color: #555; font-size: 0.85rem; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin-bottom: 0.25rem; }
-ul { margin: 0.3rem 0 0 1.25rem; } li { font-size: 0.9rem; color: #444; margin-bottom: 0.15rem; line-height: 1.6; }
-.detail { font-size: 0.9rem; color: #555; } .detail strong { color: #333; }
-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.75rem; color: #ccc; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
-@media print { nav, footer { display: none; } body { padding: 1rem 0; max-width: none; } }
-@media (max-width: 480px) { body { padding: 1.5rem 1rem; } nav { gap: 0.75rem; } .job-header { flex-direction: column; } }</style>
+.project-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.project-name { font-weight: 700; font-size: 15px; color: var(--text); }
+.project-name a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.project-metric { font-family: var(--font-mono); font-size: 12px; color: var(--accent); }
+.project-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* --- Education --- */
+.education-entry { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 6px; }
+
+/* --- Strengths --- */
+.strengths-list { list-style: none; padding: 0; margin: 0; }
+.strengths-list li { font-size: 14px; color: var(--text); padding: 4px 0; border-bottom: 1px solid var(--border-light); }
+.strengths-list li:last-child { border-bottom: none; }
+
+/* --- About text --- */
+.about-text { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 16px; }
+.about-text p { margin-bottom: 12px; }
+
+/* --- Contact --- */
+.contact-line { font-size: 14px; }
+.contact-line a { margin-right: 20px; }
+
+/* --- Footer --- */
+footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--footer-border); font-size: 12px; color: var(--footer-text); }
+footer a { color: var(--footer-link); font-weight: 700; }
+footer a:hover { color: var(--footer-link-hover); }
+
+/* --- Print --- */
+@media print { nav, footer, .sidebar { display: none; } .wrap { padding: 1rem; max-width: none; } .layout { display: block; } .main-col { width: 100%; } }
+
+/* --- Mobile: sidebar stacks below --- */
+@media (max-width: 660px) {
+  .wrap { max-width: 100%; padding: 20px 24px; }
+  .layout { flex-direction: column; gap: 32px; }
+  .sidebar { width: 100%; position: static; border-top: 1px solid var(--border); padding-top: 24px; border-left: none; padding-left: 0; }
+  h1 { font-size: 26px; }
+  nav { font-size: 12px; gap: 10px; }
+  nav .site-name { font-size: 16px; }
+  nav span { font-size: 12px; }
+  .entry-header { flex-direction: column; }
+  .sub-entry .entry-header { flex-direction: column; }
+  .home-bio { font-size: 14px; }
+  p { word-wrap: break-word; overflow-wrap: break-word; }
+}
+@media (max-width: 480px) {
+  .wrap { padding: 16px !important; }
+  h1 { font-size: 22px; }
+  nav .site-name { font-size: 14px; }
+  nav { font-size: 10px; gap: 6px; }
+  nav span { font-size: 10px; }
+  .hero-headline { font-size: 14px; }
+  .home-bio { font-size: 13px; }
+  .entry-title { font-size: 13px; }
+  .entry-role { font-size: 13px; }
+  .entry ul { font-size: 13px; }
+  .project-name { font-size: 13px; }
+  .project-desc { font-size: 13px; }
+  .sidebar-content { font-size: 12px; }
+  .sidebar-skills-list li { font-size: 12px; }
+  .strengths-list li { font-size: 13px; }
+}</style>
 </head>
 <body>
-<nav><a href="index.html" class="site-name">Jordan Mazer</a> <a href="index.html">Home</a> <a href="work.html">Work</a> <a href="experience.html">Experience</a> <span class="nav-active">About</span></nav>
+<div class="wrap">
+<nav><a href="index.html" class="site-name">Jordan Mazer</a><div class="nav-links"><a href="index.html">Home</a> <a href="experience.html">Experience</a> <span class="active">About</span></div></nav>
+<div class="layout">
+<div class="main-col">
 <h1>About</h1>
-<p>I connect people to opportunities at early-stage, a16z-backed startups. 14+ years in talent -- from cutting my teeth in a recruiting boiler room to leading thousand-person hiring operations at Riot Games, to building the talent engine for a16z's speedrun and games fund. Hiring is the highest-leverage thing a startup can do, and most of them are doing it wrong. I'm trying to fix that.</p>
-<p>What I do best: Scaling startup teams from 0 to N. Building hiring systems that actually work. Audience building (50M+ impressions, 220K+ followers, 100K+ inbound applications to a16z, 5M+ to portfolio companies).</p>
-<h2>Now</h2><p>Building speedrun-career-ops -- an open-source AI job search tool for startup talent</p>
-<h2>Looking for</h2><p>Interested in: Head of Talent, VP Talent, VP People, Head of People, Head of Recruiting, Chief People Officer, Talent Partner.</p>
-<h2>Tools</h2><p class="detail">Talent Strategy, Executive Recruiting, Org Design, HR Operations, Employment Brand, Interviewing Systems, People Analytics, HR Technology, Headcount Planning, Startup Team Building, Stakeholder Management, Content Strategy</p>
-<h2>Contact</h2><p class="page-links"><a href="https://linkedin.com/in/jordanmazer">LinkedIn</a> <a href="mailto:jmazer@a16z.com">jmazer@a16z.com</a></p>
-<footer>&copy; 2026 Jordan Mazer</footer>
+<article class="about-text"><p>I'm <a href="https://linkedin.com/in/jordanmazer">Jordan Mazer</a>, currently working with the <a href="https://speedrun.a16z.com">speedrun team at a16z</a> where I help founders build their teams. I built the <a href="https://speedrun.a16z.com">a16z speedrun talent network</a> from zero, connecting candidates to hundreds of portfolio startups. Before that, I spent almost 8 years at <a href="https://riotgames.com">Riot Games</a> scaling their recruiting and HR operations from the ground up.</p><p>I also write a <a href="https://speedrun.a16z.com">newsletter</a> for people navigating the startup job market. I love to meme. Sometimes I try to figure out <a href="https://twitter.com/justmazer">X</a> but, I won't lie, it's not my strong suit.</p></article>
+<h2>Strengths</h2><ul class="strengths-list"><li>Scaling orgs (Scopely 15 to 125, Riot 1000+ hires/year)</li><li>Technical recruiting at elite engineering orgs</li><li>Building and restructuring HR/TA functions</li><li>Crisis operations (led Riot&#39;s COVID response)</li><li>Startup-to-enterprise talent strategy</li></ul>
+</div>
+<aside class="sidebar"><div class="sidebar-section">
+<div class="sidebar-label">Target Roles</div>
+<div class="sidebar-content"><span class="sidebar-role">Head of Talent / Head of People</span><span class="sidebar-role">VP, Talent Acquisition</span></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-label">Location</div>
+<div class="sidebar-content"><span class="sidebar-location">Los Angeles, CA</span></div>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-label">Skills</div>
+<ul class="sidebar-skills-list"><li>Interviewing</li><li>Sourcing</li><li>Key Account Development</li><li>Talent Acquisition</li><li>HR Operations</li><li>HR Strategy</li><li>People Analytics</li><li>Employer Branding</li><li>Headcount Planning</li><li>Stakeholder Management</li><li>Technical Recruiting</li><li>Team Leadership</li></ul>
+</div>
+<div class="sidebar-section">
+<div class="sidebar-label">Contact</div>
+<div class="sidebar-content"><span class="sidebar-item"><a href="mailto:jmazer@a16z.com">jmazer@a16z.com</a></span><span class="sidebar-item"><a href="https://linkedin.com/in/jordanmazer">LinkedIn</a></span></div>
+</div></aside>
+</div>
+<footer>made by <a href="https://github.com/justma16ze/career-ops">speedrun</a></footer>
+</div>
 </body>
 </html>
