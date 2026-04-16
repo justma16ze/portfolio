@@ -334,7 +334,20 @@ footer a:hover { color: var(--footer-link-hover); }
 <div class="sidebar-content"><span class="sidebar-item"><a href="mailto:jmazer@a16z.com">jmazer@a16z.com</a></span><span class="sidebar-item"><a href="https://linkedin.com/in/jordanmazer">LinkedIn</a></span></div>
 </div></aside>
 </div>
-<footer>made by <a href="https://github.com/justma16ze/career-ops">speedrun</a></footer>
+<footer style="display:flex;align-items:center;gap:10px;"><canvas id="hexcore-footer" style="cursor:pointer;"></canvas>made by <a href="https://github.com/justma16ze/career-ops">speedrun</a></footer>
+<script src="hexcore.js"></script>
+<script>
+(function(){
+  var hci=setInterval(function(){
+    if(window.SpeedrunHexcore){
+      clearInterval(hci);
+      var c=document.getElementById("hexcore-footer");
+      if(c)SpeedrunHexcore.init(c,{size:48,interactive:true});
+    }
+  },200);
+  setTimeout(function(){clearInterval(hci);},10000);
+})();
+</script>
 </div>
 </body>
 </html>
